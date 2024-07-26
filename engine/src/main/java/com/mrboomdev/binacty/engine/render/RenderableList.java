@@ -1,4 +1,4 @@
-package com.mrboomdev.binacty2.engine.render;
+package com.mrboomdev.binacty.engine.render;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +69,13 @@ public class RenderableList implements Renderable {
 
 		for(var layer : layers) {
 			layer.onResume();
+		}
+	}
+
+	@Override
+	public void onResize(int width, int height) {
+		for(var layer : layers) {
+			layer.onResize(width, height);
 		}
 	}
 

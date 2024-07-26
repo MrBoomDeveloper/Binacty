@@ -1,4 +1,4 @@
-package com.mrboomdev.binacty2.desktop;
+package com.mrboomdev.binacty.desktop;
 
 public class Main {
 

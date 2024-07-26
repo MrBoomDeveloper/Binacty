@@ -1,11 +1,11 @@
-package com.mrboomdev.binacty2.android;
+package com.mrboomdev.binacty.android;
 
 import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.mrboomdev.binacty2.engine.Game;
-import com.mrboomdev.binacty2.game.levels.MainLevel;
+import com.mrboomdev.binacty.engine.Game;
+import com.mrboomdev.binacty.game.levels.MainLevel;
 
 public class MainActivity extends AndroidApplication {
 

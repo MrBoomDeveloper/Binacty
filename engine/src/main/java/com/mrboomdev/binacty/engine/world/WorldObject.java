@@ -1,13 +1,17 @@
-package com.mrboomdev.binacty2.engine.world;
+package com.mrboomdev.binacty.engine.world;
 
-import com.badlogic.gdx.math.Vector2;
-import com.mrboomdev.binacty2.engine.render.Canvas;
+import com.mrboomdev.binacty.engine.Position;
+import com.mrboomdev.binacty.engine.render.Canvas;
 
 public interface WorldObject {
 
-	Vector2 getPosition();
+	Position getPosition();
 
-	void setPosition(Vector2 position);
+	void setPosition(Position position);
+
+	int getWidth();
+
+	int getHeight();
 
 	default void destroy(boolean now) {
 		var world = getWorld();

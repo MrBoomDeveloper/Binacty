@@ -16,7 +16,7 @@
         android:supportsRtl="false"
         tools:targetApi="31">
 
-        <activity android:name=".android.MainActivity"
+        <activity android:name=".MainActivity"
             android:screenOrientation="sensorLandscape"
             android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|orientation|screenSize|screenLayout|navigation|layoutDirection"
             android:exported="true"

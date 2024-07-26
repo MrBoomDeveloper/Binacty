@@ -1,4 +1,4 @@
-package com.mrboomdev.binacty2.engine.render;
+package com.mrboomdev.binacty.engine.render;
 
 import androidx.annotation.RestrictTo;
 

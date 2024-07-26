@@ -1,8 +1,9 @@
-package com.mrboomdev.binacty2.engine;
+package com.mrboomdev.binacty.engine;
 
 import com.badlogic.gdx.ApplicationListener;
-import com.mrboomdev.binacty2.engine.render.Canvas;
-import com.mrboomdev.binacty2.engine.render.Renderable;
+import com.badlogic.gdx.utils.ScreenUtils;
+import com.mrboomdev.binacty.engine.render.Canvas;
+import com.mrboomdev.binacty.engine.render.Renderable;
 
 public class Game implements ApplicationListener {
 	private final Renderable renderable;
@@ -19,11 +20,13 @@ public class Game implements ApplicationListener {
 	}
 
 	@Override
-	public void resize(int width, int height) {}
+	public void resize(int width, int height) {
+		renderable.onResize(width, height);
+	}
 
 	@Override
 	public void render() {
-		//Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		ScreenUtils.clear(1, 0, 0, 0);
 		canvas.begin();
 		renderable.onDraw(canvas);
 		canvas.end();

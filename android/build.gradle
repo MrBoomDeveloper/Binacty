@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.mrboomdev.binacty2'
+    namespace 'com.mrboomdev.binacty.android'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.mrboomdev.binacty2"
+        applicationId "com.mrboomdev.binacty.android"
         minSdk 24
         targetSdk 34
         versionCode 1

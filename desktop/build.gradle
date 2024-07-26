@@ -9,7 +9,7 @@ java {
 
 tasks.register('runWithJavaExec', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    mainClass = "com.mrboomdev.binacty2.desktop.Main"
+    mainClass = "com.mrboomdev.binacty.desktop.Main"
     errorOutput = System.err
 }
 
