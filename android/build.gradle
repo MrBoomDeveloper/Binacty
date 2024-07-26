@@ -23,7 +23,7 @@ android {
 
     sourceSets {
         main.assets.srcDirs += "../game/src/main/assets"
-        main.jniLibs.srcDirs += "libs"
+        main.jniLibs.srcDirs += "libs/copied"
     }
 
     compileOptions {
@@ -67,24 +67,24 @@ dependencies {
 
 tasks.register("copyDownloadableDepsToLibs", Copy) {
     from configurations.implementation
-    into "libs"
+    into "libs/copied"
 }
 
 tasks.register("copyAndroidNatives") {
     doFirst {
-        file("libs/armeabi/").mkdirs()
-        file("libs/armeabi-v7a/").mkdirs()
-        file("libs/arm64-v8a/").mkdirs()
-        file("libs/x86_64/").mkdirs()
-        file("libs/x86/").mkdirs()
+        file("libs/copied/armeabi/").mkdirs()
+        file("libs/copied/armeabi-v7a/").mkdirs()
+        file("libs/copied/arm64-v8a/").mkdirs()
+        file("libs/copied/x86_64/").mkdirs()
+        file("libs/copied/x86/").mkdirs()
 
         configurations.natives.copy().files.each { jar ->
             def outputDir = null
-            if(jar.name.endsWith("natives-arm64-v8a.jar")) outputDir = file("libs/arm64-v8a")
-            if(jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
-            if(jar.name.endsWith("natives-armeabi.jar")) outputDir = file("libs/armeabi")
-            if(jar.name.endsWith("natives-x86_64.jar")) outputDir = file("libs/x86_64")
-            if(jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
+            if(jar.name.endsWith("natives-arm64-v8a.jar")) outputDir = file("libs/copied/arm64-v8a")
+            if(jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/copied/armeabi-v7a")
+            if(jar.name.endsWith("natives-armeabi.jar")) outputDir = file("libs/copied/armeabi")
+            if(jar.name.endsWith("natives-x86_64.jar")) outputDir = file("libs/copied/x86_64")
+            if(jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/copied/x86")
 
             if(outputDir != null) {
                 copy {
