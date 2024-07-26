@@ -22,6 +22,11 @@ public class Position {
 		this.y = newPosition.y;
 	}
 
+	public void set(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
 	public void add(@NonNull Position position) {
 		this.x += position.x;
 		this.y += position.y;
